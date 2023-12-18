@@ -7,27 +7,27 @@
 int main() {
 	int arr[size];
 	int i = 0;
-	int* pokaz;
+	int* pokaz;                                         // Ініціалізація змінних, масиву та вказівника
 	int sum = 0;
 	float res;
 
 	pokaz = &arr[0];
 	for (i = 0; i < size; i++) {
 
-		printf("Vvedit %d element masivu: ", i + 1);
+		printf("Vvedit %d element masivu: ", i + 1);                        // Цикл введення елементів масиву та обчислення їх суми
 		scanf("%d", (pokaz + i));
 
 		sum = sum + (*(pokaz + i));
 
 	}
 
-	res = sum / size;
+	res = sum / size;                                                        // розрахунок середньго значення
 
-	for (i = 0; i < size; i++) {
-		printf("%d elementu masivu: %d\n", i + 1, (*(pokaz + i)));
+	for (i = 0; i < size; i++) {                                             // Вивід елементів мачсиву
+		printf("%d element masivu: %d\n", i + 1, (*(pokaz + i)));
 
 	}
-	printf("seredne znachennya elementiv masivu: %2.f", res);
+	printf("\nseredne znachennya elementiv masivu: %2.f\n", res);               // Вивід середньго значення
 
 
 	return 0;
